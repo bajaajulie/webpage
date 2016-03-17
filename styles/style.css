@@ -81,12 +81,15 @@ body.cursorProgress {
 #c{
 	margin-left: auto;
     width:90%;
+		height: 90%;
 }
 
 #container {
+	position:relative;
 	margin: 0 auto; 
     background-color: White; 
 	width:80%;
+	height: 100%;
 	text-align: center;
 }
 
@@ -138,13 +141,17 @@ text-align:center;
 	color: #262626;
 }
 
-.firstImage{
-	 margin-left: auto;
-    margin-right: auto;
-	margin-top:4%;
+#container  .firstImage{
+	
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto; 
 	 width: 760px;
     height: auto;
-	display: block;
+
 }
 
 /* Gallery styles
@@ -258,7 +265,10 @@ text-align:center;
 
 @media only screen and (min-width: 1400px){
 	
+	#container .firstImage{
+    width: 900px;
 	
+	}
 	
 	
 }
