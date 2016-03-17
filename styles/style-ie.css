@@ -1,0 +1,139 @@
+
+
+
+html, body{
+  margin: 0;
+  padding-left: 0;
+  background-color: GhostWhite; 
+  font-family:  Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #7b7b7a;
+  font-size: 12px;
+  line-height: 18px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+  height:100%;
+}
+
+body.cursorProgress {
+  cursor: progress;
+}
+/* Menu styles
+===========================*/
+#navside {
+	min-width:80px;
+	position: relative;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	height: 100%;
+	float:left;   
+}
+
+#nav{
+  top: 0px;
+  background-color: GhostWhite; 
+  padding: 0px 0px 0px 10%;
+}
+
+#nav li {
+	width: 100%;
+	margin-bottom:2px;
+	list-style:none;
+     cursor: pointer;
+	 font-size: 100%;
+	 line-height: 1;     
+     }
+     
+#nav .clicked a {
+		color: magenta;
+     }
+	 
+#nav .root .clicked{
+	color: magenta;
+}
+
+#nav a:hover{
+  color: SlateGray ;
+}
+
+#nav .root-name:hover{
+	color: SlateGray ;
+}
+
+#nav a{
+	text-decoration:none;
+    color:black;
+}
+
+#nav .root{
+	text-decoration:none;
+    color:black;
+}
+
+#submenu-nav{
+	padding: 0px 0px 0px 10%;
+	width:100%;
+}
+
+.hidden { display: none; }
+
+/* Container styles
+===========================*/
+#c{
+	
+}
+
+#container {
+	position:absolute;
+    background-color: GhostWhite; 
+	min-width: 700px;
+	text-align: center;
+}
+
+#container h1 { 
+ color:rgb(102,102,102);
+ font-weight: 100;
+ text-decoration: underline;
+ }
+
+#container .image{
+    width: 645px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+	margin-bottom: 0px;
+    display: block;
+}
+
+
+#container .description{
+	margin-left: auto;
+    margin-right: auto;
+	font: italic bold 12px/30px 'Helvetica Neue', sans-serif; 
+	font-size:90%;
+    margin-top: 0;
+	line-height:0px
+}
+
+
+#container .iframe{
+	 margin-left: auto;
+     margin-right: auto;
+	 margin-top: 10px;
+	 display: block;
+	 width: 420px; 
+	 height: 280px;
+}
+
+#container p {
+	width : 700px;
+	margin-left: auto;
+    margin-right: auto;
+	margin-top: 10px;
+	text-align: justify;
+	font-size:120%;
+	color:blue;
+}
