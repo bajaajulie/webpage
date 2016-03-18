@@ -22,7 +22,6 @@ body.cursorProgress {
 #navside {
 	overflow-x: hidden;
   height: 100%;
-  width: 10%; 
   float:left;  
   background-color: White; 
   position: fixed;  
@@ -42,7 +41,7 @@ body.cursorProgress {
   padding: 0px 0px 0px 10%;
 }
 
-#nav li {
+#nav li{
 	 width: 100%;
 	 margin-bottom:2px;
 	 list-style:none;
@@ -76,12 +75,17 @@ body.cursorProgress {
 
 .hidden { display: none; }
 
+#submenu-nav>li{
+	margin-bottom:5px;
+	line-height: 1; 
+}
+
 /* Container styles
 ===========================*/
 #c{
-	margin-left: auto;
-    width:90%;
-		height: 90%;
+
+
+	height: 90%;
 }
 
 #container {
@@ -142,14 +146,13 @@ text-align:center;
 }
 
 #container  .firstImage{
-	
     position: absolute;  
     top: 0;  
     bottom: 0;  
     left: 0;  
     right: 0;  
     margin: auto; 
-	 width: 760px;
+	width: 645px;
     height: auto;
 
 }
@@ -259,10 +262,14 @@ text-align:center;
 		
 		#navside {
 
-			width: 120px; }
+			width: 200px; }
+		#c{
+			margin-left: 200px;
+		}
 		
 		}
 
+		
 @media only screen and (min-width: 1400px){
 	
 	#container .firstImage{
