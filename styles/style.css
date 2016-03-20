@@ -190,7 +190,7 @@ text-align:center;
 		}
 		
 		#container iframe{
-		width:90%;	
+		width:80%;	
 		height: 130px;
 		}
 		
@@ -199,11 +199,11 @@ text-align:center;
 		}
 
 		#nav li {
-			font-size: 110%;
+			font-size: 130%;
 		}
 		
 		#navside {
-			background-color:rgba(255, 255, 255, 0.8);
+			background-color:rgba(255, 255, 255, 0.95);
 			width: 100%; 
 			/*border:3px black solid;*/
 		}
