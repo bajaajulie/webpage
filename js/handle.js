@@ -1,10 +1,21 @@
 
 $(document).ready(function() {
 	
-				//temp
-				$('#width').on('click',function(){
-				var width = $( window ).width();	
-				$('#seewidth').html(width);	
+				//mobile button handler
+				$(window).resize(function() {
+				if ($(window).width() <= 730) {
+				$('.mobile-menu-button').show();
+				$('#navside').hide();
+				}else{
+				$('.mobile-menu-button').hide();
+				$('#navside').show();
+				}
+				});
+				
+				$(window).trigger('resize');
+				
+				$('.mobile-menu-button').click(function(){ 
+					$('#navside').fadeToggle();
 				});
 				
 				//get page url
@@ -23,9 +34,13 @@ $(document).ready(function() {
                 e.preventDefault();
                 var page = $(this).find('a').attr('href');
                 $('#container').load(page, function (){
+					if ($(window).width() <= 730) {
+						$('#navside').hide();
+					}
 					$("img.lazy").lazyload({
 						effect : "fadeIn"
 					});
+					
 					});
 				});
 				

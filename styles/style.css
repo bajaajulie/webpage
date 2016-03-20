@@ -20,10 +20,22 @@ html, body{
 
 /* Menu styles
 ===========================*/
+.mobile-menu-button{
+		background: url('../images/menu-icon1.png') no-repeat;
+		height:30px;
+		width:30px;
+		margin-top:3px;
+		margin-left:3px;
+		cursor: pointer;
+		z-index:1;
+}
+
 #navside {
   height: 100%;
   float:left;  
   position: fixed; 
+  z-index:1;
+overflow-x: hidden;
 }
 
 #nav{
@@ -74,6 +86,7 @@ html, body{
 ===========================*/
 #c{
 	height: 90%;
+	z-index:0;
 }
 
 #container {
@@ -106,19 +119,15 @@ text-align:center;
 #container .description{
 	margin-left: auto;
     margin-right: auto;
-	font: italic bold 12px/30px 'Helvetica Neue', sans-serif; 
 	font-size:90%;
     margin-top: 0;
 }
 
 
-#container .iframe{
+#container iframe{
 	 margin-left: auto;
      margin-right: auto;
 	 margin-top: 10px;
-	 display: block;
-	 width: 420px; 
-	 height: 280px;
 }
 
 #container p {
@@ -138,9 +147,7 @@ text-align:center;
     left: 0;  
     right: 0;  
     margin: auto; 
-	width: 645px;
     height: auto;
-
 }
 
 /* Gallery styles
@@ -159,36 +166,59 @@ text-align:center;
 	right: -4px;
 	height: 20px;
     width: 20px;
-	background: url('imgs/closeCross.jpg') no-repeat;
+	background: url('..\images\closeCross.jpg') no-repeat;
 }
 
 
 
-@media only screen and (max-width: 320px) 
+@media only screen and (min-width: 0) and (max-width:730px)
 {
-	
+		
+		#container 
+		{ 
+			width:95%;
+		}
+		
 	    #container p
 		{ 
 			font-size: 90%;
 			 width:100%;
 		}
+		
 		#container .image{
 			width:100%;
 		}
-		#container .iframe{
-		width: 200px;
-		height: 120px;
+		
+		#container iframe{
+		width:90%;	
+		height: 130px;
 		}
+		
 		#container h1 {
 			line-height: 120%;
 		}
 
-#nav li {
-	 font-size: 80%; 
-     }
+		#nav li {
+			font-size: 110%;
+		}
+		
+		#navside {
+			background-color:rgba(255, 255, 255, 0.8);
+			width: 100%; 
+			/*border:3px black solid;*/
+		}
+		
+		#c{
+			margin-left: 0;
+		}
+		
+		#container .firstImage{
+			width: 100%;
+			margin-top: 15%; 
+		}
 }
 
-@media only screen and (min-width: 320px) and (max-width:950px)
+@media only screen and (min-width: 730px) and (max-width:950px)
 {
 	
 	   #container p
@@ -201,9 +231,9 @@ text-align:center;
 			width: 95%;
 		}
 		
-		#container .iframe{
-		width: 300px;
-		height: 200px;
+		#container iframe{
+		width: 450px;
+		height: 320px;
 		}
 		
 		#container h1 {
@@ -219,11 +249,21 @@ text-align:center;
 		#c{
 			margin-left: 150px;
 		}
+		
+		#container .firstImage{
+			width: 500px;
+			    margin-top: 15%; 
+		}
 }
 
-@media only screen and (min-width: 950px) and (max-width:1400px)
+
+
+@media only screen and (min-width: 950px) and (max-width: 1400px)
 {
-	
+		#container .firstImage{
+			width: 730px;
+		}
+		
 		#container p
 		{ 
 			font-size: 110%;
@@ -234,7 +274,7 @@ text-align:center;
 			width: 645px;
 		}
 		
-		#container .iframe{
+		#container iframe{
 		width: 450px;
 		height: 320px;
 		}
@@ -256,9 +296,9 @@ text-align:center;
 			width: 200px; 
 			}
 		#c{
-			margin-left: 200px;
-		}
-		}
+			margin-left: 150px;
+		}	
+}
 
 		
 @media only screen and (min-width: 1400px){
@@ -277,7 +317,7 @@ text-align:center;
 			width: 645px;
 		}
 		
-		#container .iframe{
+		#container iframe{
 		width: 450px;
 		height: 320px;
 		}
@@ -299,7 +339,7 @@ text-align:center;
 			}
 			
 		#c{
-			margin-left: 140px;
+			margin-left: 150px;
 		}
 		
 	
