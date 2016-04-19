@@ -8,14 +8,17 @@
 
 <link rel="stylesheet" href="js/fancybox/fancyapps-fancyBox-18d1712/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
 
+<script src="js/jquery-1.10.1.min.js"></script>
+
 <!--[if lt IE 9]>
 <link rel="stylesheet" type="text/css" media="all" href="styles/style-ie.css"/>
+<link id="size-stylesheet" rel="stylesheet" type="text/css" href="styles/ie/950.css" />
+<script src="js/ie-handle.js"></script>
 <![endif]-->
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-<script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/nicescroll/jquery.nicescroll.js"></script>
 <script src="js/fancybox/fancyapps-fancyBox-18d1712/source/jquery.fancybox.js"></script>
 <script src="js/lazyload/jquery.lazyload.js"></script>
@@ -29,21 +32,20 @@
 </head>
 <body>
 <div class="mobile-menu-button"></div>
-<div id="navside">
-<ul id="nav">
+<div id="navside" class="navside">
+<ul id="nav" class="nav">
     <li class="root">
 	<div class="root-name">2016</div>
 	<div class="submenu hidden" >
-			<ul id="submenu-nav">
-				<li class="leaf"><a href="pages/template2.html">Prázdno1</a></li>
-				<li class="leaf"><a href="pages/template1.html">Prázdno2</a></li>
+			<ul id="submenu-nav" class="submenu-nav">
+				<li class="leaf"><a href="pages/2016_mluva.html">Mluva do větru</a></li>
 				</ul>
 	</div>
 	</li>
 	    <li class="root">
 	<div class="root-name">2015</div>
 	<div class="submenu hidden" >
-			<ul id="submenu-nav">
+			<ul id="submenu-nav" class="submenu-nav">
 				<li class="leaf"><a href="pages/2015_AC_BC.html">AC/BC</a></li>
 				<li class="leaf"><a href="pages/2015_mavnutim.html">Mávnutím rozčísnutý </br>vzduch</a></li>
 				<li class="leaf"><a href="pages/2015_banda.html">Prašivá banda </br>a hlasitý song</a></li>
@@ -55,59 +57,65 @@
 	    <li class="root">
 	<div class="root-name">2014</div>
 	<div class="submenu hidden" >
-			<ul id="submenu-nav">
-				<li class="leaf"><a href="pages/2014/jaksemaji.html">Jak se věci mají</a></li>
-				<li class="leaf"><a href="pages/2014/horecka.html">Horečka černé vody</a></li>
-				<li class="leaf"><a href="pages/2014/black.html">Black isn't black</a></li>
+			<ul id="submenu-nav" class="submenu-nav">
+				<li class="leaf"><a href="pages/2014_apetky.html">A pětky</a></li>
+				<li class="leaf"><a href="pages/2014_jaksemaji.html">Jak se věci mají</a></li>
+				<li class="leaf"><a href="pages/2014_horecka.html">Horečka černé vody</a></li>
+				<li class="leaf"><a href="pages/2014_black.html">Black isn't black</a></li>
 				</ul>
 	</div>
 	</li>
 	<li class="root">
 	<div class="root-name">2013</div>
 	<div class="submenu hidden" >
-			<ul id="submenu-nav">
-				<li class="leaf"><a href="pages/2013/pracovniNazev.html">Pracovní název - Malířství</a></li>
-				<li class="leaf"><a href="pages/2013/black.html">Dlouho dlouho nic</a></li>
-				<li class="leaf"><a href="pages/2013/punctum.html">Punctum</a></li>
+			<ul id="submenu-nav" class="submenu-nav">
+				<li class="leaf"><a href="pages/2013_malirstvi.html">Pracovní název - Malířství</a></li>
+				<li class="leaf"><a href="pages/2013_dlouho.html">Dlouho dlouho nic</a></li>
+				<li class="leaf"><a href="pages/2013_punctum.html">Punctum</a></li>
+				<li class="leaf"><a href="pages/2013_cesta.html">Cesta</a></li>
 				</ul>
 	</div>
 	</li>
 	<li class="root">
 	<div class="root-name">2012</div>
 	<div class="submenu hidden" >
-			<ul id="submenu-nav">
-				<li class="leaf"><a href="pages/2012/bod.html">Bod</a></li>
+			<ul id="submenu-nav" class="submenu-nav">
+				<li class="leaf"><a href="pages/2012_bod.html">Bod</a></li>
+				<li class="leaf"><a href="pages/2012_chodba.html">Školní poznámky</a></li>
+				<li class="leaf"><a href="pages/2012_napodoba.html">Nápodoba</a></li>
+				<li class="leaf"><a href="pages/2012_------.html">------</a></li>
+				<li class="leaf"><a href="pages/2012_uzol.html">Uzol</a></li>
 				</ul>
 	</div>
 	</li>
 	<li class="root">
 	<div class="root-name">2011</div>
 	<div class="submenu hidden" >
-			<ul id="submenu-nav">
-				<li class="leaf"><a href="pages/2011/podmalba.html">Podmalba</a></li>
+			<ul id="submenu-nav" class="submenu-nav">
+				<li class="leaf"><a href="pages/2011_podmalba.html">Podmalba</a></li>
+				<li class="leaf"><a href="pages/2011_invisible.html">Invisible</a></li>
+				<li class="leaf"><a href="pages/2011_hladko.html">Hladko-obratko</a></li>
 				</ul>
 	</div>
 	</li>
 	<li class="root">
 	<div class="root-name">2010</div>
 	<div class="submenu hidden" >
-			<ul id="submenu-nav">
-				<li class="leaf"><a href="pages/2010/stan.html">Stan</a></li>
+			<ul id="submenu-nav" class="submenu-nav">
+				<li class="leaf"><a href="pages/2010_stan.html">Stan</a></li>
+				<li class="leaf"><a href="pages/2010_vlcice.html">Vlčice</a></li>
 				</ul>
 	</div>
 	</li>
 	<li class="leaf"><a href="pages/CV.html">CV</a></li>
-	<li class="leaf"><a href="pages/Contact.html">Contact</a></li>
+	<li class="leaf"><a href="pages/contact.html">Contact</a></li>
 </ul>
 <div height="20px"></div>
 </div>
-<div id='c'>
-<div id="container">
+<div id='c' class="c">
+<div id="container" class="container">
 <img class="lazy firstImage" src="images/1.jpg">
 </div>
 </div>
-<div style= "width:100%; height:8%">
-</div>
 </body>
-
 </html>

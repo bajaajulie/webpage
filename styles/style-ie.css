@@ -1,11 +1,8 @@
-
-
-
 html, body{
   margin: 0;
   padding-left: 0;
-  background-color: GhostWhite; 
-  font-family:  Arial, sans-serif;
+  background-color: White; 
+  font-family:Courier new, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #7b7b7a;
@@ -17,123 +14,184 @@ html, body{
   height:100%;
 }
 
-body.cursorProgress {
-  cursor: progress;
-}
 /* Menu styles
 ===========================*/
-#navside {
-	min-width:80px;
-	position: relative;
-	overflow-y:scroll;
-	overflow-x:hidden;
-	height: 100%;
-	float:left;   
+.mobile-menu-button{
+		background: url('../images/menu-icon1.png') no-repeat;
+		height:30px;
+		width:30px;
+		margin-top:3px;
+		margin-left:3px;
+		cursor: pointer;
+		z-index:1;
 }
 
-#nav{
-  top: 0px;
-  background-color: GhostWhite; 
-  padding: 0px 0px 0px 10%;
+.navside {
+height: 100%;
+float:left;  
+position: fixed; 
+z-index:1;
+overflow-x: hidden;
+width: 200px;
 }
 
-#nav li {
-	width: 100%;
-	margin-bottom:2px;
-	list-style:none;
+.nav{
+  top: 0;
+  padding: 0 0 0 15px;
+  padding-left: 1em;
+}
+
+.nav>li{
+	 width: 100%;
+	 margin-bottom:2px;
+	 list-style:none;
      cursor: pointer;
 	 font-size: 100%;
-	 line-height: 1;     
-     }
-     
-#nav .clicked a {
-		color: magenta;
+	 line-height: 1; 
+	font-size: 1.2em; 	 
      }
 	 
-#nav .root .clicked{
-	color: magenta;
+	 		submenu-nav>li{
+			font-size: 1em;
+		}
+		
+		
+     
+.nav .clicked a, .nav .root .clicked {
+		color: grey;
+     }
+
+.nav a:hover, .nav .root-name:hover{
+  color: DarkGray ;
 }
 
-#nav a:hover{
-  color: SlateGray ;
-}
-
-#nav .root-name:hover{
-	color: SlateGray ;
-}
-
-#nav a{
+.nav a{
 	text-decoration:none;
     color:black;
 }
 
-#nav .root{
+.nav .root{
 	text-decoration:none;
     color:black;
 }
 
-#submenu-nav{
-	padding: 0px 0px 0px 10%;
+
+.submenu-nav{
+	padding: 0 0 0 10%;
 	width:100%;
 }
 
-.hidden { display: none; }
+.hidden {display:none;}
+
+.submenu-nav>li{
+	margin-bottom:5px;
+	line-height: 1; 
+}
 
 /* Container styles
 ===========================*/
-#c{
-	
+.c{
+	height: 90%;
+	z-index:0;
 }
 
-#container {
-	position:absolute;
-    background-color: GhostWhite; 
-	min-width: 700px;
+.container {
+	position:relative;
+	margin: 0 auto; 
+	width:80%;
+	height: 100%;
 	text-align: center;
 }
 
-#container h1 { 
- color:rgb(102,102,102);
+h1 { 
+margin-top: 20px;
+text-align:center;
+ color:#262626;
  font-weight: 100;
  text-decoration: underline;
  }
 
-#container .image{
+.container .image{
     width: 645px;
     height: auto;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
-	margin-bottom: 0px;
+	margin-bottom: 0;
     display: block;
+	border:none;
 }
 
-
-#container .description{
+.container .description{
 	margin-left: auto;
     margin-right: auto;
-	font: italic bold 12px/30px 'Helvetica Neue', sans-serif; 
 	font-size:90%;
     margin-top: 0;
-	line-height:0px
+}
+.container .location{
+	margin-left: auto;
+    margin-right: auto;
+	font-size:90%;
+    margin-top: 0;
 }
 
-
-#container .iframe{
+.container iframe{
 	 margin-left: auto;
      margin-right: auto;
-	 margin-top: 10px;
-	 display: block;
-	 width: 420px; 
-	 height: 280px;
+	 margin-top: 40px;
+	 width: 650px;
+	height: 420px;
+	 
 }
 
-#container p {
-	width : 700px;
+.container p {
+	width : 750px;
 	margin-left: auto;
     margin-right: auto;
 	margin-top: 10px;
 	text-align: justify;
 	font-size:120%;
-	color:blue;
+	color: #262626;
 }
+
+.container  .firstImage{
+	width: 50%;
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto; 
+    height: auto;
+	width: 900px;
+}
+
+.mezeraImage{
+	margin-top:30px !important;
+	margin-bottom:30px !important;
+}
+
+audio{
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+/* Gallery styles
+===========================*/
+.gallery{
+	padding-top:1%;
+	  line-height: 15px;
+}
+
+.gallery a{
+	display: inline-block;
+}
+
+.myClose{
+	top: 0;
+	right: -4px;
+	height: 20px;
+    width: 20px;
+	background: url('imgs/closeCross.jpg') no-repeat;
+	}
+	

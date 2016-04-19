@@ -14,7 +14,8 @@ $(document).ready(function() {
 				
 				$(window).trigger('resize');
 				
-				$('.mobile-menu-button').click(function(){ 
+				$('.mobile-menu-button').click(function(){
+				
 					$('#navside').fadeToggle();
 				});
 				
@@ -40,16 +41,17 @@ $(document).ready(function() {
 					$("img.lazy").lazyload({
 						effect : "fadeIn"
 					});
-					
+					$(this).append('<div style="height:20%"></div>');
 					});
 				});
 				
 				//handle toogle in menu
 				$('.root-name').click(function(){
-					$(this).addClass('clicked');
-					$(this).next('.submenu').slideToggle(function(){
+				$(this).nextAll('.submenu:first').slideToggle(function(){
 						$("#navside").mouseenter();
 				});
+					$(this).addClass('clicked');
+
 				});
 				
 				//open first page
@@ -60,7 +62,7 @@ $(document).ready(function() {
 					$(this).getNiceScroll().resize();
 				});
 				$("html,body").on('scroll', function(){ 
-					$(window).resize() 
+					$(window).resize();
 				});
 				
 	//fancybox handler	
@@ -68,19 +70,20 @@ $(document).ready(function() {
 	/* Apply fancybox to multiple items */
 	
 	$(".fancybox").fancybox({
+		tpl: {
+			closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>'
+		},
 		openEffect	: 'none',
 		closeEffect	: 'none',
 		prevEffect		: 'none',
 		nextEffect		: 'none',
 		helpers	: {
 			   overlay: {
-				locked: false,
+				locked: false
 				}
 		},
-		padding:"0",
-		    tpl: {
-        closeBtn: '<a title="Close" class="fancybox-item fancybox-close myClose" href="javascript:;"></a>'
-    }
+		padding:"0"
+
 	});
 
 
