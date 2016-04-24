@@ -32,6 +32,7 @@ $(document).ready(function() {
 
 				//load page after menu item click
 	            $('.leaf').on('click', function (e){
+				$('.firstH').hide();
                 e.preventDefault();
                 var page = $(this).find('a').attr('href');
                 $('#container').load(page, function (){
