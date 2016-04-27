@@ -53,6 +53,7 @@ $(document).ready(function() {
 					windowH = $(window).height();
 					height2 = windowH - $('#container').offset().top - $('#container').height() - ($(window).height()*0.02);
 					height1 = (windowH/100)*20;
+					
 					if($('#container').height() < $(window).height()){
 						$(this).append("<div class=\"fill\"  style=\"height:" + Math.round(height2) + "px" +"; width:100%;\"></div><footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>"); //<span><a href=\"mailto:julia@artmap.cz\">julia@artmap.cz</a></span></br><span><a href=\"mailto:barborazentkova@gmail.com\">barborazentkova@gmail.com</a></span>		
 					}else{						
