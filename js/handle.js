@@ -47,7 +47,7 @@ $(document).ready(function() {
 					}); 
 					
 					//scroll to top
-					$('html, body').animate({ scrollTop: 0 }, 0);
+					$('*').animate({ scrollTop: 0 }, 0);
 					
 					//insert foooter
 					windowH = $(window).height();
@@ -55,10 +55,11 @@ $(document).ready(function() {
 					height1 = (windowH/100)*20;
 					
 					if($('#container').height() < $(window).height()){
-						$(this).append("<div class=\"fill\"  style=\"height:" + Math.round(height2) + "px" +"; width:100%;\"></div><footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>"); //<span><a href=\"mailto:julia@artmap.cz\">julia@artmap.cz</a></span></br><span><a href=\"mailto:barborazentkova@gmail.com\">barborazentkova@gmail.com</a></span>		
+						$('#container').append("<div class=\"fill\"  style=\"height:" + Math.round(height2) + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>");	
 					}else{						
-						$(this).append("<div class=\"fill\"  style=\"height:" + Math.round(height1) + "px"+"; width:100%;\"></div><footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>"); //<span><a href=\"mailto:julia@artmap.cz\">julia@artmap.cz</a></span></br><span><a href=\"mailto:barborazentkova@gmail.com\">barborazentkova@gmail.com</a></span>		
+						$('#container').append("<div class=\"fill\"  style=\"height:" + Math.round(height1) + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>"); 	
 					}
+					
 					});
 				});
 				

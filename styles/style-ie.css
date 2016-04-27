@@ -2,7 +2,7 @@ html, body{
   margin: 0;
   padding-left: 0;
   background-color: White; 
-  font-family:Courier new, sans-serif;
+font-family: "Courier New",monospace, sans-serif;
   font-style: normal;
   font-weight: 400;
   color: #7b7b7a;
@@ -13,7 +13,6 @@ html, body{
   width: 100%;
   height:100%;
 }
-
 /* Menu styles
 ===========================*/
 .mobile-menu-button{
