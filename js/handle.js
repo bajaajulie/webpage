@@ -1,6 +1,8 @@
 
 $(document).ready(function() {
-	
+				 
+				 
+				 
 				//mobile button handler
 				$(window).resize(function() {
 				if ($(window).width() <= 730) {
@@ -14,8 +16,7 @@ $(document).ready(function() {
 				
 				$(window).trigger('resize');
 				
-				$('.mobile-menu-button').click(function(){
-				
+				$('.mobile-menu-button').click(function(){	
 					$('#navside').fadeToggle();
 				});
 				
@@ -32,17 +33,32 @@ $(document).ready(function() {
 
 				//load page after menu item click
 	            $('.leaf').on('click', function (e){
-				$('.firstH').hide();
+				$('.welcomePage').hide();
                 e.preventDefault();
                 var page = $(this).find('a').attr('href');
                 $('#container').load(page, function (){
+					
 					if ($(window).width() <= 730) {
 						$('#navside').hide();
 					}
+					
 					$("img.lazy").lazyload({
 						effect : "fadeIn"
-					});
-					$(this).append('<div style="height:20%"></div>');
+					}); 
+					
+					//scroll to top
+					$('html, body').animate({ scrollTop: 0 }, 0);
+					
+					//insert foooter
+					windowH = $(window).height();
+					height2 = windowH - $('#container').offset().top - $('#container').height() - ($(window).height()*0.02);
+					height1 = (windowH/100)*20;
+					alert(height1);
+					if($('#container').height() < $(window).height()){
+						$(this).append("<div class=\"fill\"  style=\"height:" + Math.round(height2) + "px" +"; width:100%;\"></div><footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>"); //<span><a href=\"mailto:julia@artmap.cz\">julia@artmap.cz</a></span></br><span><a href=\"mailto:barborazentkova@gmail.com\">barborazentkova@gmail.com</a></span>		
+					}else{						
+						$(this).append("<div class=\"fill\"  style=\"height:" + Math.round(height1) + "px"+"; width:100%;\"></div><footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>"); //<span><a href=\"mailto:julia@artmap.cz\">julia@artmap.cz</a></span></br><span><a href=\"mailto:barborazentkova@gmail.com\">barborazentkova@gmail.com</a></span>		
+					}
 					});
 				});
 				
