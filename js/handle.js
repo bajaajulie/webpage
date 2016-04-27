@@ -1,8 +1,6 @@
 
 $(document).ready(function() {
 				 
-				 
-				 
 				//mobile button handler
 				$(window).resize(function() {
 				if ($(window).width() <= 730) {
@@ -36,6 +34,7 @@ $(document).ready(function() {
 				$('.welcomePage').hide();
                 e.preventDefault();
                 var page = $(this).find('a').attr('href');
+			
                 $('#container').load(page, function (){
 					
 					if ($(window).width() <= 730) {
@@ -49,18 +48,21 @@ $(document).ready(function() {
 					//scroll to top
 					$('*').animate({ scrollTop: 0 }, 0);
 					
+					
+					addFooter = function(){
 					//insert foooter
 					windowH = $(window).height();
-					height2 = windowH - $('#container').offset().top - $('#container').height() - ($(window).height()*0.02);
-					height1 = (windowH/100)*20;
-					
+					height2 =  Math.round(windowH - $('#container').offset().top - $('#container').height() - ($(window).height()*0.01));
+					height1 = Math.round((windowH/100)*20);
 					if($('#container').height() < $(window).height()){
-						$('#container').append("<div class=\"fill\"  style=\"height:" + Math.round(height2) + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>");	
+						$('#container').append("<div class=\"fill\"  style=\"height:" + height2 + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>");	
 					}else{						
-						$('#container').append("<div class=\"fill\"  style=\"height:" + Math.round(height1) + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>"); 	
+						$('#container').append("<div class=\"fill\"  style=\"height:" + height1 + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>"); 	
 					}
-					
+					};
+					setTimeout(addFooter, 800);
 					});
+					
 				});
 				
 				//handle toogle in menu
@@ -103,7 +105,9 @@ $(document).ready(function() {
 		padding:"0"
 
 	});
-
-
+	$('.mapping').mouseover(function() {
+    $(this).addClass('hoverArea');
+}).mouseout(function(){
+   $(this).removeClass('hoverArea');   
 });
-				
+});
