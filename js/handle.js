@@ -34,7 +34,6 @@ $(document).ready(function() {
 				$('.welcomePage').hide();
                 e.preventDefault();
                 var page = $(this).find('a').attr('href');
-			
                 $('#container').load(page, function (){
 					
 					if ($(window).width() <= 730) {
@@ -61,9 +60,11 @@ $(document).ready(function() {
 					}
 					};
 					setTimeout(addFooter, 800);
-					});
-					
+					});		
+	
 				});
+				
+
 				
 				//handle toogle in menu
 				$('.root-name').click(function(){
