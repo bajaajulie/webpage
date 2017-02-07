@@ -171,7 +171,7 @@ text-align:center;
 }
 
 .firstImage{
-	max-height: 100%;
+max-height: 100%;
 max-width: 100%;
 width: auto;
 height: auto;
@@ -225,6 +225,10 @@ audio{
 			width:95%;
 		}
 		
+		.welcomePage{
+			width:95%;
+		}
+		
 	    .container p
 		{ 
 			font-size: 90%;
@@ -259,7 +263,7 @@ audio{
 			margin-left: 0;
 		}
 		
-		.container .firstImage{
+		 .firstImage{
 			width: 100%;
 			margin-top: 15%; 
 		}
@@ -297,9 +301,9 @@ audio{
 			margin-left: 150px;
 		}
 		
-		.container .firstImage{
+		 .firstImage{
 			width: 500px;
-			margin-top: 15%; 
+			margin-top: 5%; 
 		}
 }
 
@@ -307,8 +311,9 @@ audio{
 
 @media only screen and (min-width: 950px) and (max-width: 1400px)
 {
-		.container .firstImage{
-			width: 730px;
+		.firstImage{
+			width: 600px;
+			margin-top: 5%; 
 		}
 		
 		.container p
@@ -350,8 +355,10 @@ audio{
 		
 @media only screen and (min-width: 1400px){
 		
-		.container .firstImage{
+		 .firstImage{
 			width: 900px;
+			margin-top: 20%;
+			
 		}
 
 		.container p
