@@ -137,6 +137,8 @@ text-align:center;
 
 .lazy {
 	display: block;
+	  opacity: 0;
+  transition: opacity .3s ease-in;
 }
 
  .description{
