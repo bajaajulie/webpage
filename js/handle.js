@@ -42,15 +42,10 @@ $(document).ready(function() {
 					if ($(window).width() <= 730) {
 						$('#navside').hide();
 					}
-					$("img").unveil(0, function() {
-  $(this).load(function() {
-    this.style.opacity = 1;
-  });
-});
 					
-					/*$("img.lazy").lazyload({
+					$("img.lazy").lazyload({
 						effect : "fadeIn"
-					}); */
+					}); 
 
 					
 					//scroll to top
