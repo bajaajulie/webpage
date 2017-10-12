@@ -282,8 +282,7 @@ audio{
 		}
 		
 		.container iframe{
-			width: 450px;
-			height: 320px;
+			width: 100%;
 		}
 		
 		.container h1 {
@@ -326,8 +325,7 @@ audio{
 		}
 		
 		.container iframe{
-			width: 450px;
-			height: 320px;
+			width: 100%;
 		}
 
 		.nav>li {
@@ -371,8 +369,7 @@ audio{
 		}
 		
 		.container iframe{
-			width: 650px;
-			height: 420px;
+			width: 100%;
 		}
 
 		.nav>li {
