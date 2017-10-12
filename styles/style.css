@@ -240,8 +240,7 @@ audio{
 		}
 		
 		.container iframe{
-			width:80%;	
-			height: 130px;
+			width: 100%;	
 		}
 		
 		.container h1 {
