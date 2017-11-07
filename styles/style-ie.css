@@ -89,6 +89,10 @@ width: 200px;
 
 /* Container styles
 ===========================*/
+.hidden_content {
+	display:none; 
+}
+
 .c{
 	height: 90%;
 	z-index:0;

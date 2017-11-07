@@ -83,6 +83,10 @@ overflow-x: hidden;
 /* Container styles
 ===========================*/
 
+.hidden_content {
+	display:none; 
+}
+
 .c{
 	z-index:0;
 }
