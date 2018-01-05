@@ -83,10 +83,6 @@ overflow-x: hidden;
 /* Container styles
 ===========================*/
 
-.hidden_content {
-	display:none; 
-}
-
 .c{
 	z-index:0;
 }
@@ -124,8 +120,8 @@ text-align:center;
  }
 
 .container .image{
-    width: 100%;
-    height: auto;
+   width: auto;
+    max-height: 500px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 10px;
@@ -161,6 +157,7 @@ text-align:center;
 	 margin-left: auto;
      margin-right: auto;
 	 margin-top: 40px;
+	 
 }
 
 .container p {
@@ -203,11 +200,11 @@ audio{
 ===========================*/
 .gallery{
 	padding-top:1%;
-	  line-height: 15px;
+	line-height: 15px;
 }
 
 .gallery a{
-	display: inline-block;
+	display: /*inline-*/block;
 }
 
 .myClose{
@@ -218,7 +215,14 @@ audio{
 	background: url('imgs/closeCross.jpg') no-repeat;
 }
 
-
+@media only screen and (min-width: 0) and (max-width:500px)
+{
+			.container .image{
+			max-height:none;
+			width: 95%;
+		}
+	
+}
 
 @media only screen and (min-width: 0) and (max-width:730px)
 {
@@ -238,13 +242,11 @@ audio{
 			width:100%;
 		}
 		
-		.container .image{
-			width:100%;
-		}
+
 		
 		.container iframe{
-			width: 100%;	
-			max-height: 250px;
+			width:80%;	
+			height: 130px;
 		}
 		
 		.container h1 {
@@ -282,12 +284,12 @@ audio{
 		}
 		
 		.container .image{
-			width: 95%;
+			height: 30%;
 		}
 		
 		.container iframe{
-			width: 619px;
-		height: 348px;
+			width: 450px;
+			height: 320px;
 		}
 		
 		.container h1 {
@@ -326,12 +328,12 @@ audio{
 		}
 		
 		.container .image{
-			width: 645px;
+			height: 30%;
 		}
 		
 		.container iframe{
-			width: 645px;
-			height: 363px;
+			width: 450px;
+			height: 320px;
 		}
 
 		.nav>li {
@@ -375,7 +377,8 @@ audio{
 		}
 		
 		.container iframe{
-			width: 645px;
+			width: 650px;
+			height: 420px;
 		}
 
 		.nav>li {
