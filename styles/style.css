@@ -47,7 +47,8 @@ overflow-x: hidden;
 	 list-style:none;
      cursor: pointer;
 	 font-size: 100%;
-	 line-height: 1;     
+	 line-height: 1;
+	letter-spacing: 0.1em;	 
      }
      
 .nav .clicked a, .nav .root .clicked {
