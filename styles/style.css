@@ -97,6 +97,7 @@ overflow-x: hidden;
 	margin: 0 auto; 
 	width:750px;
 	text-align: center;
+	background-color:white;
 }
 
 .welcomePage{
@@ -108,7 +109,7 @@ overflow-x: hidden;
 
 
 h1  { 
-margin-top: 20px;
+padding-top: 20px;
 text-align:center;
  color:#424242;
  font-weight: 500;
@@ -117,7 +118,7 @@ text-align:center;
  }
  
  h2  { 
-margin-top: 20px;
+padding-top: 20px;
 text-align:center;
  color:#424242;
  font-weight: 500;
@@ -125,7 +126,7 @@ text-align:center;
  }
  
  h3{
-margin-top: 20px;
+padding-top: 20px;
 text-align:center;
  color:#424242;
  font-weight: 100;
@@ -305,9 +306,6 @@ audio{
 		.navside {
 			width: 250px; 
 			}
-		.c{
-			margin-left: 150px;
-		}
 		
 }
 
@@ -349,9 +347,7 @@ audio{
 			width: 200px; 
 			}
 			
-		.c{
-			margin-left: 150px;
-		}
+
 }
 
 		
@@ -390,10 +386,7 @@ audio{
 			width: 200px;
 		}
 			
-		.c{	
-			padding-right: 5%;
-			margin-left: 150px;
-		}
+
 		
 	
 }
