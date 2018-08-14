@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
-              			 
+window.hashG = null;
+  			 
 				//mobile button handler
 				$(window).resize(function() {
 				if ($(window).width() <= 730) {
@@ -18,8 +19,6 @@ $(document).ready(function() {
 					$('#navside').fadeToggle();
 				});
 			
-				//get page url
-				var page = $(location).attr('href');
 				
 				//set up niceScroll
 				$("#navside").niceScroll({horizrailenabled:false,cursorcolor:"#f1f0f0"});
@@ -28,46 +27,19 @@ $(document).ready(function() {
 				$("#nav .leaf").click(function(){ 
                        $(this).addClass('clicked');  
                 });
-					
-				//load page after menu item click
-				
+				location.hash= '#home';	
+				$(window).on('hashchange', function(){
+					manageHashChange(window.hashG, location.hash);	
+				});
+				//load page after menu item click			
 	            $('.leaf').on('click', function (e){
-				$('.welcomePage').hide();
+				
 				e.preventDefault();	
-                var page = $(this).find('a').attr('href');
-                $('#container').load(page, function (){
-						
-						
-						
-					if ($(window).width() <= 730) {
-						$('#navside').hide();
-					}
-					
-					$("img.lazy").lazyload({
-						effect : "fadeIn"
-					}); 
-
-					
-					//scroll to top
-					$('*').animate({ scrollTop: 0 }, 0);
-					
-					
-					addFooter = function(){
-					//insert foooter
-					windowH = $(window).height();
-					height2 =  Math.round(windowH - $('#container').offset().top - $('#container').height() - ($(window).height()*0.01));
-					height1 = Math.round((windowH/100)*20);
-					if($('#container').height() < $(window).height()){
-						$('#container').append("<div class=\"fill\"  style=\"height:" + height2 + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>");	
-					}else{						
-						$('#container').append("<div class=\"fill\"  style=\"height:" + height1 + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>"); 	
-					}
-					};
-					setTimeout(addFooter, 800);
-					
-					
-					});		
-	
+				loadPage('#'+$(this).find('a').attr('href'));
+				
+				window.hashG = '#'+$(this).find('a').attr('href');
+				location.hash = '#'+$(this).find('a').attr('href');
+				
 				});
 				
 
@@ -117,4 +89,57 @@ $(document).ready(function() {
 }).mouseout(function(){
    $(this).removeClass('hoverArea');   
 });
+
+
+
 });
+
+function manageHashChange(hashG,currentHash){
+if(currentHash == '#home'){
+	$('.welcomePage').show();
+}else if (hashG == currentHash){
+	console.log(hashG);
+}else{
+	loadPage(currentHash)
+}
+
+
+	
+}
+
+function loadPage(pageHash){
+				$('.welcomePage').hide();
+                var page = pageHash.substring(1);
+                $('#container').load(page, function (){
+						
+						
+						
+					if ($(window).width() <= 730) {
+						$('#navside').hide();
+					}
+					
+					$("img.lazy").lazyload({
+						effect : "fadeIn"
+					}); 
+
+					
+					//scroll to top
+					$('*').animate({ scrollTop: 0 }, 0);
+					
+					
+					addFooter = function(){
+					//insert foooter
+					windowH = $(window).height();
+					height2 =  Math.round(windowH - $('#container').offset().top - $('#container').height() - ($(window).height()*0.01));
+					height1 = Math.round((windowH/100)*20);
+					if($('#container').height() < $(window).height()){
+						$('#container').append("<div class=\"fill\"  style=\"height:" + height2 + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>");	
+					}else{						
+						$('#container').append("<div class=\"fill\"  style=\"height:" + height1 + "px" + "; width:100%;\"></div>"+"<footer style= \"font-size: 0.9em; position: absolute; bottom: 12px; width: 100%;\"><span>&copy; Baja & Julka</span></br></footer>"); 	
+					}
+					};
+					setTimeout(addFooter, 800);
+				
+					});	
+}
+
