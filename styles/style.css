@@ -97,6 +97,10 @@ overflow-x: hidden;
 	margin: 0 auto; 
 	width:750px;
 	text-align: center;
+<<<<<<< HEAD
+=======
+	background-color:white;
+>>>>>>> parent of 7936e87... white bacground test 2
 }
 
 .welcomePage{
