@@ -36,7 +36,7 @@ window.hashG = null;
 				
 				e.preventDefault();	
 				loadPage('#'+$(this).find('a').attr('href'));
-				
+				$('.c').show();
 				window.hashG = '#'+$(this).find('a').attr('href');
 				location.hash = '#'+$(this).find('a').attr('href');
 				
@@ -97,6 +97,8 @@ window.hashG = null;
 function manageHashChange(hashG,currentHash){
 if(currentHash == '#home'){
 	$('.welcomePage').show();
+	$('.c').hide();
+	
 }else if (hashG == currentHash){
 	console.log(hashG);
 }else{
