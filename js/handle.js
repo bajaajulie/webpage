@@ -37,15 +37,15 @@ window.hashG = null;
 					//CV case
 				if($(this).id == "CV"){
 					window.open($(this).find('a').attr('href'), '_blank');
-				break;	
-				}
+				
+				}else{
 				
 				e.preventDefault();	
 				loadPage('#'+$(this).find('a').attr('href'));
 				$('.c').show();
 				window.hashG = '#'+$(this).find('a').attr('href');
 				location.hash = '#'+$(this).find('a').attr('href');
-				
+				}
 				});
 				
 
