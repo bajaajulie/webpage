@@ -36,7 +36,7 @@ window.hashG = null;
 	            $('.leaf').on('click', function (e){
 				e.preventDefault();	
 					//CV case
-				if($this.attr("id") == "CV"){
+				if($(this).attr("id") == "CV"){
 					window.open($(this).find('a').attr('href'), '_blank');
 				
 				}else{
