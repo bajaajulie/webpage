@@ -34,13 +34,13 @@ window.hashG = null;
 				
 				//load page after menu item click			
 	            $('.leaf').on('click', function (e){
+				e.preventDefault();	
 					//CV case
-				if($(this).id == "CV"){
+				if($this.attr("id") == "CV"){
 					window.open($(this).find('a').attr('href'), '_blank');
 				
 				}else{
 				
-				e.preventDefault();	
 				loadPage('#'+$(this).find('a').attr('href'));
 				$('.c').show();
 				window.hashG = '#'+$(this).find('a').attr('href');
