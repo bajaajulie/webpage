@@ -31,8 +31,14 @@ window.hashG = null;
 				$(window).on('hashchange', function(){
 					manageHashChange(window.hashG, location.hash);	
 				});
+				$('.leaf').on('click',function{})
 				//load page after menu item click			
 	            $('.leaf').on('click', function (e){
+					//CV case
+				if($(this).id == "CV"){
+					window.open($(this).find('a').attr('href'), '_blank');
+				break;	
+				}
 				
 				e.preventDefault();	
 				loadPage('#'+$(this).find('a').attr('href'));
