@@ -31,7 +31,7 @@ window.hashG = null;
 				$(window).on('hashchange', function(){
 					manageHashChange(window.hashG, location.hash);	
 				});
-				$('.leaf').on('click',function{})
+				
 				//load page after menu item click			
 	            $('.leaf').on('click', function (e){
 					//CV case
