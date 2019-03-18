@@ -20,6 +20,15 @@ window.hashG = null;
 				});
 			
 				
+var options = {
+  root: document.querySelector('#scrollArea'),
+  rootMargin: '0px',
+  threshold: 1.0
+}
+
+var observer = new IntersectionObserver(callback, options);
+				
+				
 				//set up niceScroll
 				$("#navside").niceScroll({horizrailenabled:false,cursorcolor:"#f1f0f0"});
 
@@ -46,6 +55,10 @@ window.hashG = null;
 				$('.c').show();
 				window.hashG = '#'+$(this).find('a').attr('href');
 				location.hash = '#'+$(this).find('a').attr('href');
+				
+   
+				
+				
 				}
 				});
 				
@@ -116,6 +129,8 @@ if(currentHash == '#home'){
 	
 }
 
+
+
 function loadPage(pageHash){
 				$('.welcomePage').hide();
                 var page = pageHash.substring(1);
@@ -127,11 +142,39 @@ function loadPage(pageHash){
 						$('#navside').hide();
 					}
 					
-					$("img.lazy").lazyload({
-						effect : "fadeIn"
-					}); 
-
+					var imagesToLoad = document.querySelectorAll('img[data-src]');
+					var loadImages = function(image) {
+						image.setAttribute('src', image.getAttribute('data-src'));
+						image.onload = function() {
+						image.removeAttribute('data-src');
+						};
+					};
 					
+					imagesToLoad.forEach(function(img) {
+					loadImages(img);
+					});
+					
+if('IntersectionObserver' in window) {
+  var observer = new IntersectionObserver(function(items, observer) {
+    items.forEach(function(item) {
+      if(item.isIntersecting) {
+        loadImages(item.target);
+        observer.unobserve(item.target);
+      }
+    });
+  });
+  imagesToLoad.forEach(function(img) {
+    observer.observe(img);
+  });
+} else {
+  imagesToLoad.forEach(function(img) {
+    loadImages(img);
+  });
+}
+
+
+
+
 					//scroll to top
 					$('*').animate({ scrollTop: 0 }, 0);
 					
