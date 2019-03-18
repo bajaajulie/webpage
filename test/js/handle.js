@@ -41,7 +41,7 @@ window.hashG = null;
 				e.preventDefault();	
 					//CV case
 				if($(this).attr("id") == "CV"){
-					window.open($(this).find('a').attr('href'), '_blank');
+				window.open($(this).find('a').attr('href'), '_blank');
 				
 				}else{
 				
@@ -125,9 +125,7 @@ function loadPage(pageHash){
 				$('.welcomePage').hide();
                 var page = pageHash.substring(1);
                 $('#container').load(page, function (){
-						
-						
-						
+										
 					if ($(window).width() <= 730) {
 						$('#navside').hide();
 					}
@@ -144,24 +142,26 @@ function loadPage(pageHash){
 					loadImages(img);
 					});**/
 			
+
 if('IntersectionObserver' in window) {
 	const options = {
   root: null,
-  rootMargin: '50px 0px',
-  threshold: 0
+  rootMargin: "300px",
+  threshold: 1
 };
-  var observer = new IntersectionObserver(function(items, observer) {
+
+var observer = new IntersectionObserver(function(items, observer) {
     items.forEach(function(item) {
       if(item.isIntersecting) {
         loadImages(item.target);
         observer.unobserve(item.target);
       }
     });
-  }, {rootMargin: "300px",
-  threshold: 0.2});
+  }, options);
   imagesToLoad.forEach(function(img) {
     observer.observe(img);
   });
+  
 } else {
   imagesToLoad.forEach(function(img) {
     loadImages(img);
