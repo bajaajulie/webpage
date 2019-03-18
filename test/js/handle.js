@@ -150,6 +150,14 @@ if('IntersectionObserver' in window) {
   threshold: 1
 };
 
+items.forEach(entry => {
+	console.log("entry_correction");
+  if (entry.intersectionRatio > 0) {
+    entry.target.classList.add('in-viewport');
+  } else {
+    entry.target.classList.remove('in-viewport');
+  }
+  
 var observer = new IntersectionObserver(function(items, observer) {
     items.forEach(function(item) {
       if(item.isIntersecting) {
