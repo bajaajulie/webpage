@@ -157,7 +157,8 @@ if('IntersectionObserver' in window) {
         observer.unobserve(item.target);
       }
     });
-  });
+  }, {rootMargin: "300px",
+  threshold: 0.2});
   imagesToLoad.forEach(function(img) {
     observer.observe(img);
   });
