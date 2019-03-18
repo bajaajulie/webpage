@@ -135,6 +135,10 @@ function loadPage(pageHash){
 						};
 					};
 					
+					imagesToLoad.forEach(function(img) {
+					loadImages(img);
+					});
+					
 					//scroll to top
 					$('*').animate({ scrollTop: 0 }, 0);
 					
