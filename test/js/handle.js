@@ -146,23 +146,17 @@ function loadPage(pageHash){
 if('IntersectionObserver' in window) {
   const options = {
   root: null,
-  rootMargin: "300px",
+  rootMargin: "20px",
   threshold: 0.5
 };
 	console.log("intersectionObserverCreated");
 
   
 var observer = new IntersectionObserver(function(items, observer) {
-	items.forEach(entry => {
-	console.log("entry_correction");
-  if (entry.intersectionRatio > 0) {
-    entry.target.classList.add('in-viewport');
-  } else {
-    entry.target.classList.remove('in-viewport');
-} });
 
-    items.forEach(function(item) {
-      if(item.isIntersecting) {
+  items.forEach(function(item) {
+	  
+      if(item.isIntersecting && item.height>0) {
         loadImages(item.target);
         observer.unobserve(item.target);
       }
