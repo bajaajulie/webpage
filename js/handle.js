@@ -46,6 +46,26 @@ window.hashG = null;
 				$('.c').show();
 				window.hashG = '#'+$(this).find('a').attr('href');
 				location.hash = '#'+$(this).find('a').attr('href');
+				
+if('IntersectionObserver' in window) {
+  var observer = new IntersectionObserver(function(items, observer) {
+    items.forEach(function(item) {
+      if(item.isIntersecting) {
+        loadImages(item.target);
+        observer.unobserve(item.target);
+      }
+    });
+  });
+  imagesToLoad.forEach(function(img) {
+    observer.observe(img);
+  });
+} else {
+  imagesToLoad.forEach(function(img) {
+    loadImages(img);
+  });
+}   
+				
+				
 				}
 				});
 				
@@ -141,23 +161,7 @@ function loadPage(pageHash){
 					loadImages(img);
 					});
 					
-if('IntersectionObserver' in window) {
-  var observer = new IntersectionObserver(function(items, observer) {
-    items.forEach(function(item) {
-      if(item.isIntersecting) {
-        loadImages(item.target);
-        observer.unobserve(item.target);
-      }
-    });
-  });
-  imagesToLoad.forEach(function(img) {
-    observer.observe(img);
-  });
-} else {
-  imagesToLoad.forEach(function(img) {
-    loadImages(img);
-  });
-}   
+
 
 
 
