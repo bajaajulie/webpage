@@ -144,19 +144,19 @@ function loadPage(pageHash){
 			
 
 if('IntersectionObserver' in window) {
-	const options = {
+  const options = {
   root: null,
   rootMargin: "300px",
   threshold: 1
 };
-
+	console.log("intersectionObserverCreated");
 items.forEach(entry => {
 	console.log("entry_correction");
   if (entry.intersectionRatio > 0) {
     entry.target.classList.add('in-viewport');
   } else {
     entry.target.classList.remove('in-viewport');
-  }
+} });
   
 var observer = new IntersectionObserver(function(items, observer) {
     items.forEach(function(item) {
@@ -171,6 +171,7 @@ var observer = new IntersectionObserver(function(items, observer) {
   });
   
 } else {
+console.log("elseloop");
   imagesToLoad.forEach(function(img) {
     loadImages(img);
   });
