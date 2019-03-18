@@ -27,6 +27,7 @@ window.hashG = null;
 				$("#nav .leaf").click(function(){ 
                        $(this).addClass('clicked');  
                 });
+
 				location.hash= '#home';	
 				$(window).on('hashchange', function(){
 					manageHashChange(window.hashG, location.hash);	

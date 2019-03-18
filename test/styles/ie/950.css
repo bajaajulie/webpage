@@ -1,0 +1,38 @@
+		.container .firstImage{
+			width: 730px;
+		}
+		
+		.container p
+		{ 
+			font-size: 110%;
+			width:660px;
+		}
+		
+		.container .image{
+			width: 645px;
+		}
+		
+		.container iframe{
+			width: 450px;
+			height: 320px;
+		}
+
+		.nav>li {
+			font-size: 1.2em; 
+		}
+		
+		submenu-nav>li{
+			font-size: 1em;
+		}
+		
+		.nav{
+			padding-left: 1em;
+		}
+		
+		.navside {		
+			width: 200px; 
+			}
+			
+		.c{
+			margin-left: 150px;
+		}
