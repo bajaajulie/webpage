@@ -170,8 +170,8 @@ if('IntersectionObserver' in window) {
 
 
 
-					scroll to top
-					$('*').animate({ scrollTop: 0 }, 0);
+					//scroll to top
+				//	$('*').animate({ scrollTop: 0 }, 0);
 					
 					
 				/*	addFooter = function(){
