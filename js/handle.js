@@ -116,6 +116,8 @@ if(currentHash == '#home'){
 	
 }
 
+
+
 function loadPage(pageHash){
 				$('.welcomePage').hide();
                 var page = pageHash.substring(1);
@@ -139,6 +141,26 @@ function loadPage(pageHash){
 					loadImages(img);
 					});
 					
+if('IntersectionObserver' in window) {
+  var observer = new IntersectionObserver(function(items, observer) {
+    items.forEach(function(item) {
+      if(item.isIntersecting) {
+        loadImages(item.target);
+        observer.unobserve(item.target);
+      }
+    });
+  });
+  imagesToLoad.forEach(function(img) {
+    observer.observe(img);
+  });
+} else {
+  imagesToLoad.forEach(function(img) {
+    loadImages(img);
+  });
+}   
+
+
+
 					//scroll to top
 					$('*').animate({ scrollTop: 0 }, 0);
 					
