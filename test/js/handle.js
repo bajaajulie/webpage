@@ -44,11 +44,11 @@ window.hashG = null;
 					window.open($(this).find('a').attr('href'), '_blank');
 				
 				}else{
-				$('.c').show();
+				
 				loadPage('#'+$(this).find('a').attr('href'));
 				window.hashG = '#'+$(this).find('a').attr('href');
 				location.hash = '#'+$(this).find('a').attr('href');
-				
+				$('.c').show();
 				}
 				});
 				
@@ -143,8 +143,13 @@ function loadPage(pageHash){
 					/**imagesToLoad.forEach(function(img) {
 					loadImages(img);
 					});**/
-					
+			
 if('IntersectionObserver' in window) {
+	const options = {
+  root: null,
+  rootMargin: '50px 0px',
+  threshold: 0
+};
   var observer = new IntersectionObserver(function(items, observer) {
     items.forEach(function(item) {
       if(item.isIntersecting) {
@@ -165,8 +170,8 @@ if('IntersectionObserver' in window) {
 
 
 
-					//scroll to top
-					//$('*').animate({ scrollTop: 0 }, 0);
+					scroll to top
+					$('*').animate({ scrollTop: 0 }, 0);
 					
 					
 				/*	addFooter = function(){
