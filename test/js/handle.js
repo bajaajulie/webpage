@@ -155,8 +155,8 @@ if('IntersectionObserver' in window) {
 var observer = new IntersectionObserver(function(items, observer) {
 
   items.forEach(function(item) {
-	  
-    if(item.isIntersecting && item.height()>0) {
+	   console.log(item.data);
+    if(item.isIntersecting) {
         loadImages(item.target);
         observer.unobserve(item.target);
       }
