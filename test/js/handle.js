@@ -147,18 +147,20 @@ if('IntersectionObserver' in window) {
   const options = {
   root: null,
   rootMargin: "300px",
-  threshold: 1
+  threshold: 0.5
 };
 	console.log("intersectionObserverCreated");
-items.forEach(entry => {
+
+  
+var observer = new IntersectionObserver(function(items, observer) {
+	items.forEach(entry => {
 	console.log("entry_correction");
   if (entry.intersectionRatio > 0) {
     entry.target.classList.add('in-viewport');
   } else {
     entry.target.classList.remove('in-viewport');
 } });
-  
-var observer = new IntersectionObserver(function(items, observer) {
+
     items.forEach(function(item) {
       if(item.isIntersecting) {
         loadImages(item.target);
@@ -166,6 +168,7 @@ var observer = new IntersectionObserver(function(items, observer) {
       }
     });
   }, options);
+  
   imagesToLoad.forEach(function(img) {
     observer.observe(img);
   });
