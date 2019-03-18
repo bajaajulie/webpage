@@ -49,9 +49,6 @@ window.hashG = null;
 				window.hashG = '#'+$(this).find('a').attr('href');
 				location.hash = '#'+$(this).find('a').attr('href');
 				
-   
-				
-				
 				}
 				});
 				
@@ -143,9 +140,9 @@ function loadPage(pageHash){
 						};
 					};
 					
-					imagesToLoad.forEach(function(img) {
+					/**imagesToLoad.forEach(function(img) {
 					loadImages(img);
-					});
+					});**/
 					
 if('IntersectionObserver' in window) {
   var observer = new IntersectionObserver(function(items, observer) {
