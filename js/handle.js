@@ -127,10 +127,13 @@ function loadPage(pageHash){
 						$('#navside').hide();
 					}
 					
-					$("img.lazy").lazyload({
-						effect : "fadeIn"
-					}); 
-
+					var imagesToLoad = document.querySelectorAll('img[data-src]');
+					var loadImages = function(image) {
+						image.setAttribute('src', image.getAttribute('data-src'));
+						image.onload = function() {
+						image.removeAttribute('data-src');
+						};
+					};
 					
 					//scroll to top
 					$('*').animate({ scrollTop: 0 }, 0);
