@@ -44,9 +44,8 @@ window.hashG = null;
 					window.open($(this).find('a').attr('href'), '_blank');
 				
 				}else{
-				
-				loadPage('#'+$(this).find('a').attr('href'));
 				$('.c').show();
+				loadPage('#'+$(this).find('a').attr('href'));
 				window.hashG = '#'+$(this).find('a').attr('href');
 				location.hash = '#'+$(this).find('a').attr('href');
 				
@@ -170,10 +169,10 @@ if('IntersectionObserver' in window) {
 
 
 					//scroll to top
-					$('*').animate({ scrollTop: 0 }, 0);
+					//$('*').animate({ scrollTop: 0 }, 0);
 					
 					
-					addFooter = function(){
+				/*	addFooter = function(){
 					//insert foooter
 					windowH = $(window).height();
 					height2 =  Math.round(windowH - $('#container').offset().top - $('#container').height() - ($(window).height()*0.01));
@@ -185,7 +184,7 @@ if('IntersectionObserver' in window) {
 					}
 					};
 					setTimeout(addFooter, 800);
-				
+				*/
 					});	
 }
 
