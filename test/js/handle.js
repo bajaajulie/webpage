@@ -36,9 +36,9 @@ window.hashG = null;
 					manageHashChange(window.hashG, location.hash);	
 				});
 				
-				//load page after menu item click			
+				//load page after menu item click
 	            $('.leaf').on('click', function (e){
-				e.preventDefault();	
+				e.preventDefault();
 					//CV case
 				if($(this).attr("id") == "CV"){
 				window.open($(this).find('a').attr('href'), '_blank');
@@ -146,8 +146,8 @@ function loadPage(pageHash){
 if('IntersectionObserver' in window) {
   const options = {
   root: null,
-  rootMargin: 0,
-  threshold: 0.5
+  rootMargin: 0px,
+  threshold: 0.2
 };
 	console.log("intersectionObserverCreated");
 
