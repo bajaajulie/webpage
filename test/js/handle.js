@@ -146,7 +146,7 @@ function loadPage(pageHash){
 if('IntersectionObserver' in window) {
   const options = {
   root: null,
-  rootMargin: 0px,
+  rootMargin: '0px',
   threshold: 0.2
 };
 	console.log("intersectionObserverCreated");
